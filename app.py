@@ -33,7 +33,7 @@ with header:
 with dataset:
     st.header("Customer - Sentiments (through complaints)")
     data = pd.read_csv('customer_reduce.csv')
-    data.drop(['Unnamed: 0'], axis=1, inplace= True)
+    # data.drop(['Unnamed: 0'], axis=1, inplace= True)
     # remove NaN values from sub_issue, tags, state, zipcode, timely_response, complaint_id, consumer_disputed?
     data["sub_product"] = data["sub_product"].fillna(data["sub_product"].mode()[0])
     data["sub_issue"]= data["sub_issue"].fillna(data["sub_issue"].mode()[0])
